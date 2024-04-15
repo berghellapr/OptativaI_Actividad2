@@ -3,11 +3,8 @@ package ar.com.unpaz.principal;
 import ar.com.unpaz.service.Servicio;
 import ar.com.unpaz.service.ServicioImp;
 import java.util.List;
-<<<<<<< HEAD
 import java.util.Scanner;
 
-=======
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 import ar.com.unpaz.model.Cliente;
 import ar.com.unpaz.model.Detalle;
 import ar.com.unpaz.model.Producto;
@@ -19,7 +16,6 @@ public class Principal {
 		
 		Servicio servicio = new ServicioImp();
 
-<<<<<<< HEAD
 		
 		String directorioRepository = "src/ar/com/unpaz/repository/";
 		
@@ -76,31 +72,6 @@ public class Principal {
         }
 
         scanner.close();
-=======
-        String archivoCliente = "cliente.txt";
-        String archivoDetalle = "detalle.txt";
-        String archivoProducto = "producto.txt";
-        String archivoVenta = "venta.txt";
-        
-        /* ---CLIENTES--- */
-        List<Cliente> datosCliente = servicio.leerClientes(archivoCliente);
-        servicio.mostrarClientes(datosCliente);
-
-        /* ---DETALLE--- */
-        List<Detalle> datosDetalle = servicio.leerDetalles(archivoDetalle);
-        servicio.mostrarDetalles(datosDetalle);
-        
-        /* ---PRODUCTO--- */
-        List<Producto> datosProducto = servicio.leerProductos(archivoProducto);
-        servicio.mostrarProductos(datosProducto);
-        
-        /* ---VENTA--- */
-        List<Venta> datosVenta = servicio.leerVentas(archivoVenta);
-        servicio.mostrarVentas(datosVenta);
-        
-        /* ---COMPLETO--- */
-        servicio.mostrarCompleto(0);
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 	}
 
 }

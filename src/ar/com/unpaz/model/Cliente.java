@@ -6,13 +6,7 @@ public class Cliente {
 	private String nombre;
 	private String apellido;
 	private String telefono;
-<<<<<<< HEAD
-
-=======
-	private int cantVentas;
-	private float montoTotal;
 	
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 	public Cliente() {
 		
 	}
@@ -47,23 +41,4 @@ public class Cliente {
 	public String getTelefono() {
 		return telefono;
 	}
-<<<<<<< HEAD
-=======
-
-	public int getCantVentas() {
-		return cantVentas;
-	}
-
-	public void setCantVentas(int cantVentas) {
-		this.cantVentas = cantVentas;
-	}
-
-	public float getMontoTotal() {
-		return montoTotal;
-	}
-
-	public void setMontoTotal(float montoTotal) {
-		this.montoTotal = montoTotal;
-	}	
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 }

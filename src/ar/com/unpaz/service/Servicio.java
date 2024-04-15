@@ -24,11 +24,6 @@ public interface Servicio {
 	public List<Venta> leerVentas (String archivoVenta);
 	void mostrarVentas(List<Venta> datosVenta);
 	
-<<<<<<< HEAD
 	/* ---MOSTRAR INFORME--- */
 	void mostrarInformeCliente(int idCliente, String archivoCliente, String archivoVenta);
-=======
-	/* ---COMPLETO--- */
-	void mostrarCompleto(int idCliente, String archivoCliente, String archivoVenta);
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 }

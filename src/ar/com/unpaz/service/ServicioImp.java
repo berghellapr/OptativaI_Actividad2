@@ -37,12 +37,8 @@ public class ServicioImp implements Servicio {
 	    }
 	
 	public void mostrarClientes(List<Cliente> datosCliente) {
-<<<<<<< HEAD
 		System.out.println("\n ---CLIENTES--- \n");
-=======
-		System.out.println(" ---CLIENTES--- \n");
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
-		
+
 		for (Cliente cliente : datosCliente) {
             System.out.println("ID: " + cliente.getIdCliente());
             System.out.println("Nombre: " + cliente.getNombre());
@@ -79,11 +75,7 @@ public class ServicioImp implements Servicio {
     }
 
 	public void mostrarDetalles(List<Detalle> datosDetalle) {
-<<<<<<< HEAD
 		System.out.println("\n ---DETALLES--- \n");
-=======
-		System.out.println(" ---DETALLES--- \n");
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 		
 		for (Detalle detalle : datosDetalle) {
 	        System.out.println("ID: " + detalle.getIdDetalle());
@@ -120,11 +112,7 @@ public class ServicioImp implements Servicio {
     }
 
 	public void mostrarProductos(List<Producto> datosProducto) {
-<<<<<<< HEAD
 		System.out.println("\n ---PRODUCTOS--- \n");
-=======
-		System.out.println(" ---PRODUCTOS--- \n");
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 		
 		for (Producto producto : datosProducto) {
 	        System.out.println("ID: " + producto.getIdProducto());
@@ -160,11 +148,7 @@ public class ServicioImp implements Servicio {
     }
 
 	public void mostrarVentas(List<Venta> datosVenta) {
-<<<<<<< HEAD
 		System.out.println("\n ---VENTAS--- \n");
-=======
-		System.out.println(" ---VENTAS--- \n");
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 		
 		for (Venta venta : datosVenta) {
 	        System.out.println("ID: " + venta.getIdVenta());
@@ -175,7 +159,6 @@ public class ServicioImp implements Servicio {
 		}
 	}
 	
-<<<<<<< HEAD
 	/* ---MOSTRAR INFORME--- */
 	
 	public void mostrarInformeCliente(int idCliente, String archivoCliente, String archivoVenta) {
@@ -201,50 +184,6 @@ public class ServicioImp implements Servicio {
 	    } else {
 	        System.out.println("Cliente no encontrado con ID " + idCliente);
 	    }
-=======
-	/* ---COMPLETO--- */
-	
-	public void mostrarCompleto(int idCliente, String archivoCliente, String archivoVenta) {
-		
-		List<Cliente> datosCliente = leerClientes(archivoCliente);
-		List<Venta> datosVenta = leerVentas(archivoVenta);
-		
-		Cliente cliente = new Cliente();
-		int cantVentas = 0;
-		float montoTotal = 0;
-		
-		try {
-			for (Venta v : datosVenta) {
-				if(v.getIdCliente() == idCliente) {
-
-					cantVentas++;
-					montoTotal += v.getTotal();
-					
-					for (Cliente c: datosCliente) {
-						if(c.getIdCliente() == idCliente) {
-							cliente.setNombre(c.getNombre());
-						    cliente.setApellido(c.getApellido());
-						    cliente.setCantVentas(cantVentas);
-						    cliente.setMontoTotal(montoTotal);						    
-						}
-					}
-				}
-			}
-			
-			System.out.println(" ---DATOS DE CLIENTES\n" );
-			
-			for (Venta venta : datosVenta) {
-		        System.out.println("ID: " + venta.getIdVenta());
-		        System.out.println("Fecha: " + venta.getFecha());
-		        System.out.println("Cliente: " + venta.getIdCliente());
-		        System.out.println("Total: $" + venta.getTotal());
-		        System.out.println();
-			}
-			
-		} catch (Exception e) {
-			System.out.println(e.toString());
-		}
->>>>>>> 9c3294e12e1ddac796f6a7740a4b8c4451c1f477
 	}
 }
 
